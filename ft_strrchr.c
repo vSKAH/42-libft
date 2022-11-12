@@ -3,19 +3,24 @@
 //
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c) {
+char	*ft_strrchr(const char *s, int c)
+{
+	int	index;
+	char	*result;
+
+	result = NULL;
 	if (!s)
-		return (NULL);
+		return (result);
 
-	int s_size;
-
-	s_size = (int) ft_strlen (s);
-
-	while (s[s_size])
+	index = (int)ft_strlen(s);
+	while (index >= 0)
 	{
-		if (s[s_size] == c)
-			return ((char *) s);
-		s_size--;
+		if (s[index] == c)
+		{
+			result = (char *) s + index;
+			break ;
+		}
+		index--;
 	}
-	return (NULL);
+	return (result);
 }

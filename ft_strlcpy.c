@@ -3,13 +3,17 @@
 //
 #include "libft.h"
 
-size_t ft_strlcpy (char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	dst[size + 1] = '\0';
-	while (size >= 1)
+	size_t	index;
+
+	if (!src)
+		return (ft_strlen (src));
+	index = 0;
+	while (index < size - 1)
 	{
-		dst[size] = src[size];
-		size--;
+		dst[index] = src[index];
+		index++;
 	}
-	return sizeof (dst);
+	return (ft_strlen (src));
 }

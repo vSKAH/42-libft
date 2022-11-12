@@ -4,17 +4,18 @@
 
 #include "libft.h"
 
-void *memcpy (void *restrict dest, __attribute__((unused)) const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
+	size_t	index;
 
-	size_t index;
-
+	if (!dest && !src)
+		return (0);
 	index = 0;
-
-	while (index <= n)
+	while (n > index)
 	{
+		((char *)dest)[index] = ((char *) src)[index];
 		index++;
 	}
-
-	return dest;
+	return (dest);
 }
+

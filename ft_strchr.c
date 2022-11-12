@@ -4,19 +4,24 @@
 
 #include "libft.h"
 
-char *ft_strchr (const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (!s)
-		return (NULL);
+	size_t	index;
+	char	*result;
 
-	int index;
+	result = NULL;
+	if (!s)
+		return (result);
 
 	index = 0;
 	while (s[index])
 	{
 		if (s[index] == c)
-			return ((char *) s);
+		{
+			result = (char *) s + index;
+			break ;
+		}
 		index++;
 	}
-	return (NULL);
+	return (result);
 }
