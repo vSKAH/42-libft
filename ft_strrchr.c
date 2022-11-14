@@ -5,12 +5,10 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	index;
+	int		index;
 	char	*result;
 
 	result = NULL;
-	if (!s)
-		return (result);
 
 	index = (int)ft_strlen(s);
 	while (index >= 0)

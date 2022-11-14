@@ -6,11 +6,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	index;
+	char	*chars;
 
 	index = 0;
+	chars = (char *)s;
 	while (index < n)
 	{
-		((char *) s)[index] = '\0';
+		chars[index] = '\0';
 		index++;
 	}
 }
