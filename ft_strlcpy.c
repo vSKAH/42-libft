@@ -7,13 +7,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
 
-	if (!src && size > 0)
+	if (size == 0)
 		return (ft_strlen (src));
 	index = 0;
-	while (index < size - 1)
+	while (src[index] && index < size -1)
 	{
 		dst[index] = src[index];
 		index++;
 	}
+	dst[index] = '\0';
 	return (ft_strlen (src));
 }
