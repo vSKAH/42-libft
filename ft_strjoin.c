@@ -1,0 +1,36 @@
+//
+// Created by Jimmy Badaire on 11/17/22.
+//
+
+#include <stdlib.h>
+#include "libft.h"
+
+static int	ft_fill(void *mlc, char const *text, int mlc_index)
+{
+	int	index;
+
+	index = 0;
+	while (text[index])
+	{
+		((char *)mlc)[mlc_index] = text[index];
+		index++;
+		mlc_index++;
+	}
+	return (mlc_index);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	void	*mlc;
+	int		size;
+
+	mlc = malloc(sizeof(char ) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
+	if (!mlc)
+		return (NULL);
+
+	size = ft_fill(mlc, s1, 0);
+	ft_fill(mlc, s2, size);
+
+	((char *) mlc)[size] = '\0';
+	return ((char *) mlc);
+}
