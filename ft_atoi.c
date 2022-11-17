@@ -3,12 +3,12 @@
 //
 #include "libft.h"
 
-int	ft_is_space(int character)
+static int	ft_is_space(int character)
 {
 	return ((character >= 9 && character <= 13) || character == ' ');
 }
 
-int	ft_is_sign(int character)
+static int	ft_is_sign(int character)
 {
 	return (character == '+' || character == '-');
 }

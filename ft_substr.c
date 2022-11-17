@@ -20,6 +20,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		((char *)mlc)[index + start] = s[index + start];
 		index++;
 	}
-	((char *)mlc)[index + start] = '\0';
+	((char *)mlc)[index + start + 1] = '\0';
 	return (mlc);
 }

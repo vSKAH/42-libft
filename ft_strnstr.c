@@ -6,7 +6,7 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	text_index;
-	size_t		word_index;
+	size_t	word_index;
 
 	text_index = 0;
 	word_index = 0;
