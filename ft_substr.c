@@ -9,6 +9,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	void	*mlc;
 	size_t	index;
 
+	if (!s)
+		return (NULL);
 	mlc = malloc(sizeof (char) * (len + 1));
 	if (!mlc)
 		return (NULL);
