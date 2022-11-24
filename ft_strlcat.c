@@ -1,6 +1,15 @@
-//
-// Created by jimmy on 08/11/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/24 14:30:14 by jbadaire          #+#    #+#             */
+/*   Updated: 2022/11/24 14:31:55 by jbadaire         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -10,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	index = 0;
 	dst_size = ft_strlen(dst);
-	if (size < 1)
+	if (size < dst_size)
 		return (ft_strlen(src) + size);
 	while (src[index] && dst_size < size - 1)
 	{

@@ -1,12 +1,20 @@
-//
-// Created by Jimmy Badaire on 11/17/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/24 14:28:46 by jbadaire          #+#    #+#             */
+/*   Updated: 2022/11/24 14:31:55 by jbadaire         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*mlc;
+	char	*mlc;
 	size_t	index;
 
 	if (!s)
@@ -17,9 +25,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	index = 0;
 	while (index < len)
 	{
-		((char *)mlc)[index + start] = s[index + start];
+		(mlc)[index + start] = s[index + start];
 		index++;
 	}
-	((char *)mlc)[index + start + 1] = '\0';
+	(mlc)[index + start + 1] = '\0';
 	return (mlc);
 }

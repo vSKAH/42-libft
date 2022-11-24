@@ -1,6 +1,15 @@
-//
-// Created by jimmy on 08/11/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/24 14:28:54 by jbadaire          #+#    #+#             */
+/*   Updated: 2022/11/24 14:31:55 by jbadaire         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -9,7 +18,6 @@ char	*ft_strrchr(const char *s, int c)
 	char	*result;
 
 	result = NULL;
-
 	index = (int)ft_strlen(s);
 	while (index >= 0)
 	{
